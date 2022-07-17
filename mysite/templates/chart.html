@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
+
+    <link rel="stylesheet" href="/static/css/chart.css">
+    <title>Document</title>
+<body>
+    <header>
+        <a class="header__logo" href="/">
+            <img class="logo__img" src="{{url_for('static', filename='img/favicon.png')}}" alt="">
+            <span class="logo__title">HTT</span>
+        </a>
+        <ul class="header__nav">
+            <li class="nav__item active"><a href="/">Trang chủ</a></li>
+            <li class="nav__item">
+                Tiện ích <i class="fa-duotone fa-chevron-down"></i>
+                <ul class="subnav">
+                    <li class="subnav__item">Theo dõi sức khoẻ</li>
+                    <li class="subnav__item">Đặt lịch khám</li>
+                </ul>
+            </li>
+            <li class="nav__item">Liên hệ</li>
+        </ul>
+    </header>
+    <div class="content" style="padding-top: 20px;">
+        <div class="today-chart">
+    
+          <section class="main-container">
+            
+            <h1>Hôm nay</h1>
+            
+            <figure class="chart" data-percent="75">
+              <figcaption>37 &#8451</figcaption>
+              <div class="info temp"> Nhiệt độ </div>
+              <svg width="200" height="200">
+                <circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+              </svg>
+            </figure>
+            
+            <figure class="chart" data-percent="75">
+              <figcaption>90/70mmHg </figcaption>
+              <div class="info blpre"> Huyết áp </div>
+              <svg width="200" height="200">
+                <circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+              </svg>
+            </figure>
+            
+            
+            <figure class="chart" data-percent="50">
+              <figcaption>70 BPM</figcaption>
+              <div class="info harte"> Nhịp tim </div>
+              <svg width="200" height="200">
+                <circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+              </svg>
+            </figure>
+            
+            <figure class="chart" data-percent="25">
+              <figcaption>98%</figcaption>
+              <div class="info spo2"> SpO2 </div>
+              <svg width="200" height="200">
+                <circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+              </svg>
+            </figure>
+          </section>
+    
+    
+        </div>
+        <div class="history-chart">
+          <h1>Biểu đồ</h1>
+          <div class="temp-chart">
+            <div class="container">
+              <div class="line-chart">
+                <h2 class="title">Nhiệt độ</h2>
+                <div class='grafico'>
+                  <ul class='eje-y'>
+                    <li data-ejeY='37.9'></li>
+                    <li data-ejeY='37.6'></li>
+                    <li data-ejeY='37.3'></li>
+                    <li data-ejeY='37'></li>
+                  </ul>
+                  <ul class='eje-x'>
+                    <li>19/7/2022</li>
+                    <li>20/7/2022</li>
+                    <li>21/7/2022</li>
+                    <li>22/7/2022</li>
+                    <li>19/7/2022</li>
+                    <li>24/7/2022</li>
+                    <li>25/7/2022</li>
+    
+                  </ul>
+                    <span data-valor='25'> 
+                    <span data-valor='8'>
+                    <span data-valor='13'>
+                    <span data-valor='5'>   
+                    <span data-valor='23'>   
+                    <span data-valor='12'>
+                    <span data-valor='15'>
+                    </span></span></span></span></span></span></span>
+                 </div>
+           
+              </div>
+                        <ul class="time-lenght horizontal-list">
+                            <li><a class="time-lenght-btn" href="#14">Tuần</a></li>
+                            <li><a class="time-lenght-btn" href="#15">Tháng</a></li>
+                            <li><a class="time-lenght-btn" href="#16">Năm</a></li>
+                        </ul>
+                        <ul class="month-data clear">
+                           
+                        </ul>
+              </div>
+                    
+    
+    
+                
+          </div>
+          <div class="blpre-chart">
+            <div class="container">
+              <div class="line-chart">
+                <h2 class="title">Huyết áp</h2>
+                <div class='grafico'>
+                  <ul class='eje-y'>
+                    <li data-ejeY='120'></li>
+                    <li data-ejeY='90'></li>
+                    <li data-ejeY='80'></li>
+                    <li data-ejeY='50'></li>
+                  </ul>
+                  <ul class='eje-x'>
+                    <li>19/7/2022</li>
+                    <li>20/7/2022</li>
+                    <li>21/7/2022</li>
+                    <li>22/7/2022</li>
+                    <li>19/7/2022</li>
+                    <li>24/7/2022</li>
+                    <li>25/7/2022</li>
+    
+                  </ul>
+                    <span data-valor='25'> 
+                    <span data-valor='8'>
+                    <span data-valor='13'>
+                    <span data-valor='5'>   
+                    <span data-valor='23'>   
+                    <span data-valor='12'>
+                    <span data-valor='15'>
+                    </span></span></span></span></span></span></span>
+                 </div>
+           
+              </div>
+                        <ul class="time-lenght horizontal-list">
+                            <li><a class="time-lenght-btn" href="#14">Tuần</a></li>
+                            <li><a class="time-lenght-btn" href="#15">Tháng</a></li>
+                            <li><a class="time-lenght-btn" href="#16">Năm</a></li>
+                        </ul>
+                        <ul class="month-data clear">
+                           
+                        </ul>
+              </div>
+          </div>
+          <div class="harte-chart">
+            <div class="container">
+              <div class="line-chart">
+                <h2 class="title">Nhịp tim</h2>
+                <div class='grafico'>
+                  <ul class='eje-y'>
+                    <li data-ejeY='120'></li>
+                    <li data-ejeY='90'></li>
+                    <li data-ejeY='80'></li>
+                    <li data-ejeY='50'></li>
+                  </ul>
+                  <ul class='eje-x'>
+                    <li>19/7/2022</li>
+                    <li>20/7/2022</li>
+                    <li>21/7/2022</li>
+                    <li>22/7/2022</li>
+                    <li>19/7/2022</li>
+                    <li>24/7/2022</li>
+                    <li>25/7/2022</li>
+    
+                  </ul>
+                    <span data-valor='25'> 
+                    <span data-valor='8'>
+                    <span data-valor='13'>
+                    <span data-valor='5'>   
+                    <span data-valor='23'>   
+                    <span data-valor='12'>
+                    <span data-valor='15'>
+                    </span></span></span></span></span></span></span>
+                 </div>
+           
+              </div>
+                        <ul class="time-lenght horizontal-list">
+                            <li><a class="time-lenght-btn" href="#14">Tuần</a></li>
+                            <li><a class="time-lenght-btn" href="#15">Tháng</a></li>
+                            <li><a class="time-lenght-btn" href="#16">Năm</a></li>
+                        </ul>
+                        <ul class="month-data clear">
+                           
+                        </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </>
+  <script src="/static/js/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</body>
+</html>
+

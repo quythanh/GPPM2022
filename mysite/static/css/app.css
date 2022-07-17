@@ -1,0 +1,41 @@
+.banner {
+  margin: 0 -20px; }
+  .banner img {
+    width: 100%; }
+
+.boxes {
+  width: 100%;
+  position: absolute;
+  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  transform: translateY(-15%); }
+
+.box {
+  width: 350px;
+  height: 400px;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .5s;
+  box-shadow: 1px 5px 20px 5px #ccc; }
+  .box:nth-child(odd) {
+    background-color: var(--primary); }
+  .box:nth-child(even) {
+    background-color: #14457b; }
+  .box:hover {
+    transform: scale(1.05); }
+    .box:hover .box__icon {
+      transform: scaleX(-1); }
+
+.box__icon {
+  font-size: 100px;
+  transition: all .5s; }
+
+.box__title {
+  font-size: 30px;
+  font-weight: 500; }

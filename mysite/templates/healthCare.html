@@ -1,0 +1,130 @@
+{% extends 'Layout/master.html' %}
+
+{% block title %}Theo dõi sức khoẻ{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/healthCare.css')}}">
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <h1 class="form__title">Phiếu theo dõi sức khoẻ</h1>
+        <div class="section" id="status">
+            <div>
+                <label for="status1">Mạch</label>
+                <input type="number" name="status1" id="status1" max="200">
+                <span>lần/phút</span>
+            </div>
+            
+            <div>
+                <label for="status2">Nhiệt độ hằng ngày</label>
+                <input type="number" step="any" name="status2" id="status2">
+                <span><sup>o</sup>C</span>
+            </div>
+            
+            <div>
+                <label for="status3">Nhịp thở</label>
+                <input type="number" name="status3" id="status3">
+                <span>nhịp/phút</span>
+            </div>
+            
+            <div>
+                <label for="status4">SpO<sub>2</sub></label>
+                <input type="number" name="status4" id="status4" max="100">
+                <span>%</span>
+            </div>
+            
+            <div>
+                <label for="status5">Huyết áp tối đa</label>
+                <input type="number" name="status5" id="status5">
+                <span>mmhg</span>
+            </div>
+            <div>
+                <label for="status6">Huyết áp tối thiểu</label>
+                <input type="number" name="status6" id="status6">
+                <span>mmhg</span>
+            </div>
+            
+            <div>
+                <input type="checkbox" name="status7" id="status7">
+                <label for="status7">Không triệu chứng</label>
+            </div>
+        </div>
+        
+        <div class="symptoms section">
+            <div class="section" id="common_symptom">
+                <h2 class="section__title">Triệu chứng thông thường</h2>
+                <div>
+                    <input type="checkbox" name="symptom" value="1" id="symptom1">
+                    <label for="symptom1">Mệt mỏi</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="symptom" value="2" id="symptom2">
+                    <label for="symptom2">Ho</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="symptom" value="3" id="symptom3">
+                    <label for="symptom3">Ho ra đờm</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="symptom" value="4" id="symptom4">
+                    <label for="symptom4">Ớn lạnh/gai rét</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="symptom" value="5" id="symptom5">
+                    <label for="symptom5">Viêm kết mạc (mắt đỏ)</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="symptom" value="6" id="symptom6">
+                    <label for="symptom6">Mất vị giác hoặc khứu giác</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="symptom" value="7" id="symptom7">
+                    <label for="symptom7">Tiêu chảy (phân lỏng / đi ngoài)</label>
+                </div>
+            </div>
+            
+            <div class="section" id="dangerous_symptom">
+                <h2 class="section__title">Triệu chứng nguy hiểm</h2>
+                <div>
+                    <input type="checkbox" name="dsymptom" value="1" id="dsymptom1">
+                    <label for="dsymptom1">Ho ra máu</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="dsymptom" value="2" id="dsymptom2">
+                    <label for="dsymptom2">Thở dốc hoặc khó thở</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="dsymptom" value="3" id="dsymptom3">
+                    <label for="dsymptom3">Đau tức ngực kéo dài</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="dsymptom" value="4" id="dsymptom4">
+                    <label for="dsymptom4">Lơ mơ, không tỉnh táo</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="others">
+            <div>
+                <label for="note">Triệu chứng khác thường:</label>
+                <input type="text" name="note" id="note">
+            </div>
+        </div>
+
+        <button type="submit">Lưu</button>
+    </form>
+{% endblock %}
+
+{% block js %}
+    <script src="{{url_for('static', filename='js/healthCare.js')}}"></script>
+{% endblock %}

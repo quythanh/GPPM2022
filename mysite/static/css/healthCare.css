@@ -1,0 +1,50 @@
+.content {
+  padding-top: 20px; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 50%;
+  margin: auto; }
+  form button {
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 8px;
+    margin: 0 30px; }
+  form .form__title {
+    color: var(--form-color);
+    text-align: center; }
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 40px; }
+  .section > div:not(.section) {
+    display: flex;
+    align-items: center;
+    gap: 5px; }
+  .section input {
+    border-bottom: 1px solid; }
+    .section input[type="number"] {
+      width: 40px;
+      text-align: right; }
+    .section input::-webkit-outer-spin-button, .section input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+  .section #common_symptom > div {
+    min-width: calc(25% - 40px); }
+  .section .section__title {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    background-color: var(--form-color);
+    color: #fff; }
+
+#status div:last-child {
+  width: 100%; }
+
+.symptoms {
+  gap: 20px; }
+  .symptoms.hide {
+    display: none; }

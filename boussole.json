@@ -1,0 +1,8 @@
+{
+    "SOURCES_PATH": "mysite/static/sass",
+    "TARGET_PATH": "mysite/static/css",
+    "LIBRARY_PATHS": [],
+    "OUTPUT_STYLES": "nested",
+    "SOURCE_COMMENTS": false,
+    "EXCLUDES": []
+}

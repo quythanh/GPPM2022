@@ -1,0 +1,27 @@
+{% extends 'Layout/master.html' %}
+
+{% block title %}Trang chủ{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="banner">
+        <img src="{{url_for('static', filename='img/breadcrumb-1.jpg')}}" alt="">
+    </div>
+    <div class="boxes">
+        <a class="box" href="/profile">
+            <div class="box__icon"><i class="fa-duotone fa-user"></i></div>
+            <div class="box__title">Hồ sơ cá nhân</div>
+        </a>
+        <a class="box" href="/health-care">
+            <div class="box__icon"><i class="fa-duotone fa-memo-circle-check"></i></div>
+            <div class="box__title">Theo dõi sức khoẻ</div>
+        </a>
+        <a class="box" href="/chart">
+            <div class="box__icon"><i class="fa-duotone fa-chart-line"></i></div>
+            <div class="box__title">Biểu đồ sức khoẻ</div>
+        </a>
+    </div>
+{% endblock %}

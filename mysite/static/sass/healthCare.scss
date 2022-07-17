@@ -1,0 +1,74 @@
+.content {
+    padding-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+    margin: auto;
+
+    button {
+        padding: 10px 20px;
+        border: 1px solid;
+        border-radius: 8px;
+        margin: 0 30px;
+    }
+
+    .form__title {
+        color: var(--form-color);
+        text-align: center;
+    }
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 40px;
+
+    & > div:not(.section) {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    input {
+        border-bottom: 1px solid;
+
+        &[type="number"] {
+            width: 40px;
+            text-align: right;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    #common_symptom > div {
+        min-width: calc(25% - 40px);
+    }
+
+    .section__title {
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+        background-color: var(--form-color);
+        color: #fff;
+    }
+}
+
+#status div:last-child {
+    width: 100%;
+}
+
+.symptoms {
+    gap: 20px;
+
+    &.hide {
+        display: none;
+    }
+}

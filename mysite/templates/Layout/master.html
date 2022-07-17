@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='img/favicon.png')}}">
+        <link rel="stylesheet" href="https://quythanh.tk/assets/css/fontawesomepro/all.css">
+
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
+        {% block css %}{% endblock %}
+    </head>
+
+    <body>
+        <!--Header-->
+        <header>
+            <a class="header__logo" href="/">
+                <img class="logo__img" src="{{url_for('static', filename='img/favicon.png')}}" alt="">
+                <span class="logo__title">HTT</span>
+            </a>
+            <ul class="header__nav">
+                <li class="nav__item active"><a href="/">Trang chủ</a></li>
+                <li class="nav__item">
+                    Tiện ích <i class="fa-duotone fa-chevron-down"></i>
+                    <ul class="subnav">
+                        <li class="subnav__item">Theo dõi sức khoẻ</li>
+                        <li class="subnav__item">Đặt lịch khám</li>
+                    </ul>
+                </li>
+                <li class="nav__item">Liên hệ</li>
+            </ul>
+        </header>
+
+        <!--Content-->
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <!--Javascript-->
+        {% block js %}{% endblock %}
+    </body>
+
+</html>
+<!--                  
+    _/﹋\_                             _
+    (҂`_´) -Pèng                   .__(.)< (MEOW)
+    <,︻╦╤─ ҉ – – – – –             \___)   
+    _/﹋\_                   ~~~~~~~~~~~~~~~~~~
+-->

@@ -1,0 +1,147 @@
+.form_id {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_id input {
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 20px;
+  height: 20px;
+  padding: 20px;
+}
+
+#container {
+  display: flex;
+  position: relative;
+  background: #fff;
+  margin: 10% auto;
+  height: 100%;
+  width: 70%;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* ========================== */
+.img-profile {
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.personal {
+  width: 30%;
+  border-radius: 30px;
+  background: #8ac926;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.img-profile img {
+  height: 155px;
+  width: 155px;
+  border-radius: 100px;
+  transform: translateY(20px) scale(1.15);
+  transform-origin: 50% bottom;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.img-profile img:hover {
+  transform: translateY(0) scale(1.2);
+}
+.per-title {
+  font-weight: bold;
+  color: #fff;
+  padding: 10px;
+}
+.per-data {
+  background: #5f75ee;
+  height: 50%;
+  border-radius: 30px;
+  padding: 15px;
+}
+/* ============================ */
+.stand-data {
+  margin-left: 40px;
+  display: flex;
+  height: 100%;
+}
+.data {
+  width: 70%;
+  margin: 20px;
+}
+.decoration {
+  display: flex;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+.box:first-child {
+  background: #7f9c96;
+}
+.box:nth-child(2) {
+  background: #8fad88;
+}
+.box:nth-child(3) {
+  background: #cbdf90;
+}
+h1 {
+  margin: 20px;
+}
+.box-title {
+  font-weight: bold;
+  padding: 5px;
+  color: #fff;
+  width: 100px;
+  height: 50px;
+  border-radius: 7px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.height {
+  background: #ffa2c0;
+}
+.weight {
+  background: #5f75ee;
+}
+.bmi {
+  background: #ffa2c0;
+}
+.blood {
+  background: #ef709d;
+}
+
+@media (hover: hover) {
+  .box-title {
+    transform: translateY(10px);
+    transition: 0.2s;
+  }
+  .box-title:hover {
+    transform: translateY(0);
+  }
+  .box-title:nth-child(1) {
+    transition-delay: 0s;
+  }
+  .box-title:nth-child(2) {
+    transition-delay: 0.05s;
+  }
+  .box-title:nth-child(3) {
+    transition-delay: 0.1s;
+  }
+}
+
+.post {
+  padding-left: 40px;
+  padding-top: 10px;
+}
+.info {
+  font-size: 20px;
+  font-weight: bold;
+}

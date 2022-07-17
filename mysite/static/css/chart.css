@@ -1,0 +1,445 @@
+/* Import the Google Font 'Lato' */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+:root {
+  --background: #f4f6f9;
+  --primary: #2490eb;
+  --form-color: #4f7085;
+}
+
+/* Container styles */
+body {
+  background: linear-gradient(-45deg, #e2a9e5 15%, #2b94e5 100%);
+  color: #333;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+}
+.today-chart{
+  background: #fff;
+  border-radius: 20px;
+  margin: 0 auto;
+  height: 400px;
+  width: 90%;
+}
+.main-container {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.chart {
+  position: relative;
+  display: inline-block;
+  color: #999;
+  font-size: 20px;
+  text-align: center;
+}
+
+.chart figcaption {
+  padding: 50px 25px;
+  width: 100px;
+  height: 50px;
+  border: 20px solid #f0f0f0;
+  border-radius: 100px;
+  line-height: 50px;
+}
+
+.chart img {
+  position: absolute;
+  max-width: 100px;
+  max-height: 100px;
+  background: white;
+}
+/* END Container styles */
+
+/* Colors for the circles and positions for the graphics */
+.temp {
+  top: 50px;
+  left: 45px;
+}
+
+.temp + svg .outer {
+  stroke: #e34f26;
+}
+
+.blpre {
+  top: 55px;
+  left: 48px;
+}
+
+.blpre + svg .outer {
+  stroke: #0d84ce;
+}
+
+.harte {
+  top: 45px;
+  left: 45px;
+}
+
+.harte + svg .outer {
+  stroke: #f0e040;
+}
+
+.spo2 {
+  width: 200px;
+  height: 200px;
+  top: 45px;
+  left: 45px;
+}
+
+.spo2 + svg .outer {
+  stroke: #83cd29;
+}
+
+.chart svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.outer {
+  fill: transparent;
+  stroke: #333;
+  stroke-width: 20;
+  stroke-dasharray: 534;
+  transition: stroke-dashoffset 1s;
+  animation-play-state: running;
+  
+
+}
+
+.chart:hover .outer {
+  stroke-dashoffset: 534 !important;
+  animation-play-state: paused;
+}
+
+.chart[data-percent='100'] .outer {
+  stroke-dashoffset: 0;
+  animation: show100 2s;
+}
+
+.chart[data-percent='75'] .outer {
+  stroke-dashoffset: 133;
+  animation: show75 2s;
+}
+
+.chart[data-percent='50'] .outer {
+  stroke-dashoffset: 267;
+  animation: show50 2s;
+}
+
+.chart[data-percent='98'] .outer {
+  stroke-dashoffset: 401;
+  animation: show25 2s;
+}
+/* END set initial animation values */
+
+/* Keyframes for the initial animation */
+
+
+@keyframes show100 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes show75 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 134;
+  }
+}
+
+@keyframes show75 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 124;
+  }
+}
+
+
+@keyframes show50 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 267;
+  }
+}
+
+
+@keyframes show25 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 401;
+  }
+}
+
+.history-chart h1{
+   padding: 50px 0;
+   text-align: center;
+}
+.history-chart{
+  overflow: hidden;
+  background: #fff;
+  border-radius: 20px;
+  margin: 20px auto;
+  height: 70%;
+  width: 90%;
+}
+.temp-chart
+{
+  margin: 20px;
+}
+
+/************************
+Css orignal https://codepen.io/jlalovi/details/bIyAr
+************************/
+
+
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+
+h2 {
+	font-size: 17px;
+}
+
+p {
+	font-size: 15px;
+}
+
+a {
+	text-decoration: none;
+	font-size: 15px;
+}
+	a:hover {
+		text-decoration: underline;
+	}
+h2, p, a, span{
+	color: #fff;
+}
+	.scnd-font-color {
+		color: #9099b7;
+	}
+.titular {
+display: block;
+line-height: 60px;
+margin: 0;
+text-align: center;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+.horizontal-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+	.horizontal-list li {
+		float: left;
+	}
+		.block {
+			margin: 25px 25px 0 0;
+			background: #394264;
+			border-radius: 5px;
+      float: left;
+      width: 300px;
+      overflow: hidden;
+		}
+		/******************************************** LEFT CONTAINER *****************************************/
+		.left-container {}
+			.menu-box {
+				height: 360px;
+			}
+
+			.donut-chart-block {
+				overflow: hidden;
+			}
+				.donut-chart-block .titular {
+					padding: 10px 0;
+				}
+				.os-percentages li {
+					width: 75px;
+					border-left: 1px solid #394264;
+					text-align: center;					
+					background: #50597b;
+				}
+					.os {
+						margin: 0;
+						padding: 10px 0 5px;
+						font-size: 15px;		
+					}
+						.os.ios {
+							border-top: 4px solid #e64c65;
+						}
+						.os.mac {
+							border-top: 4px solid #11a8ab;
+						}
+						.os.linux {
+							border-top: 4px solid #fcb150;
+						}
+						.os.win {
+							border-top: 4px solid #4fc4f6;
+						}
+					.os-percentage {
+						margin: 0;
+						padding: 0 0 15px 10px;
+						font-size: 25px;
+					}
+			.line-chart-block, .bar-chart-block {
+				height: 400px;
+			}
+				.line-chart {
+          padding: 50px;
+          width: 80%;
+					height: 200px;
+					background: #0d84ce;
+          border-radius: 20px;
+          overflow: hidden;
+          margin: 0 auto;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+				}
+        .title{
+          color: #fff;
+        }
+				.time-lenght {
+          margin: 0 30px;
+					padding-top: 22px;
+					padding-left: 38px;
+          overflow: hidden;
+				}
+					.time-lenght-btn {
+						display: block;
+						width: 90px;
+						line-height: 42px;
+						background: #50597b;
+						border-radius: 5px;
+						font-size: 14px;
+						text-align: center;
+						margin-right: 5px;
+						/* transition: background .3s; */
+            background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+             background-size: 300% 100%;
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+            transition: all .4s ease-in-out;
+					}
+						.time-lenght-btn:hover {
+              background-position: 100% 0;
+              transition: all .4s ease-in-out;
+							text-decoration: none;
+						}
+				.month-data {
+					padding-top: 28px;
+				}
+					.month-data p {
+						display: inline-block;
+						margin: 0;
+						padding: 0 25px 15px;            
+						font-size: 16px;
+					}
+						.month-data p:last-child {
+							padding: 0 25px;
+              float: right;
+							font-size: 15px;
+						}
+						.increment {
+							color: #e64c65;
+						}
+
+
+
+.grafico {
+  
+  padding: 0rem 1rem 1rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #fff;
+  font-size: 80%;
+}
+.grafico span {
+  display: block;
+  position: absolute;
+  bottom: 4rem;
+  left: 7rem;
+  height: 0;
+  border-top: 2px solid;
+  transform-origin: left center;
+}
+.grafico span > span {
+  left: 100%; bottom: 0;
+}
+[data-valor='25'] {width: 75px; transform: rotate(-45deg);}
+[data-valor='8'] {width: 24px; transform: rotate(65deg);}
+[data-valor='13'] {width: 39px; transform: rotate(-45deg);}
+[data-valor='5'] {width: 15px; transform: rotate(50deg);}
+[data-valor='23'] {width: 69px; transform: rotate(-70deg);}
+[data-valor='12'] {width: 36px; transform: rotate(75deg);}
+[data-valor='15'] {width: 45px; transform: rotate(-45deg);}
+
+[data-valor]:before {
+  content: '';
+  position: absolute;
+  display: block;
+  right: -4px;
+  bottom: -3px;
+  padding: 4px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+[class^='eje-'] {
+  position: absolute;
+  left: 0;
+  bottom: 0rem;
+  width: 100%;
+  padding: 1rem 1rem 0 2rem;
+  height: 80%;
+}
+.eje-x {
+  display: flex;
+  height: 2.5rem;
+}
+.eje-y{
+
+}
+.eje-y li {
+  height: 20%;
+  border-top: 1px solid #000;
+}
+[data-ejeY]:before {
+  content: attr(data-ejeY);
+  display: inline-block;
+  width: 2rem;
+  text-align: right;
+  line-height: 0;
+  position: relative;
+  left: -2.5rem;
+  top: -.5rem;
+} 
+.eje-x li {
+  width: 33%;
+  float: left;
+  text-align: center;
+}
+
+/******************************************
+
+

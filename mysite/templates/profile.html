@@ -1,0 +1,17 @@
+{% extends 'Layout/master.html' %}
+
+{% block title %}Hồ sơ cá nhân{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/profile.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="form_id">
+        <input type="text" placeholder="Nhập ID" id="user_id" autocomplete="off">
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{url_for('static', filename='js/profile.js')}}"></script>
+{% endblock %}
